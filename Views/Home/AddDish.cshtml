@@ -1,0 +1,35 @@
+@model Dish
+
+<div class="text-center">
+  <h1 class="display-4">Welcome to CRUDelicious</h1>
+  <p>Check out some recent dishes!</p> <a href="/new"><p>Add a Dish</p></a>
+  <form asp-controller="Home" asp-action="CreateDish" method="POST">
+      <div>
+        <label asp-for="ChefsName">Chef's Name: </label>
+        <input type="text" asp-for="ChefsName"/>
+      </div>
+      <div>
+        <label asp-for="Name">Name: </label>
+        <input type="text" asp-for="Name"/>
+      </div> 
+      <div>
+        <label asp-for="Calories">Calories: </label>
+        <input type="text" asp-for="Calories"/>
+      </div>
+      <div>
+        <label asp-for="Tastiness">Tastiness: </label>
+        <select asp-for="Tastiness">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div>
+        <label asp-for="Description">Description: </label>
+        <textarea asp-for="Description"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+  </form>
+</div>
