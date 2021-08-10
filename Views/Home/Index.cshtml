@@ -13,7 +13,7 @@
             @{
                 foreach (Dish dish in ViewBag.AllDishes) 
                 {
-                    <a href="/@dish.DishId"><li>@dish</li></a>
+                    <a href="/dish/@dish.DishId"><li>@dish.Name</li></a>
                 }
             }
         </ul>

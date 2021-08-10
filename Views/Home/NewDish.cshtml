@@ -6,8 +6,20 @@
 
 <div class="text-center">
     <h1 class="display-4">@ViewBag.Dish.Name</h1>
-    <h2>@ViewBag.Dish.ChefsName</h2> <a href=""><p>Home</p></a>
+    <h2>@ViewBag.Dish.ChefsName</h2> <a href="/"><p>Home</p></a>
     <hr>
     <div>
+      <p>@ViewBag.Dish.Description</p>
+      <p>@ViewBag.Dish.Calories</p>
+      <p>@ViewBag.Dish.Tastiness</p>
+    </div>
+    <div>
+      <a href="/delete/@ViewBag.Dish.DishId">Testing</a>
+      <form asp-controller = "Home" asp-action="/delete/@ViewBag.Dish.DishId" method="GET">
+        <input type="submit" value="Delete"/>
+      </form>
+      <form asp-controller = "Home" asp-action="/edit/@ViewBag.dishID">
+        <input type="submit" value="Edit"/>
+      </form>
     </div>
 </div>
