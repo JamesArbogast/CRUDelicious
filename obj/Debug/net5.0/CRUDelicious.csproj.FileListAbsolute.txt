@@ -50,3 +50,4 @@ C:\Users\james\OneDrive\Desktop\coding_dojo\CRUDelicious\obj\Debug\net5.0\CRUDel
 C:\Users\james\OneDrive\Desktop\coding_dojo\CRUDelicious\obj\Debug\net5.0\CRUDelicious.genruntimeconfig.cache
 C:\Users\james\OneDrive\Desktop\coding_dojo\CRUDelicious\obj\Debug\net5.0\Razor\Views\Home\AddDish.cshtml.g.cs
 C:\Users\james\OneDrive\Desktop\coding_dojo\CRUDelicious\obj\Debug\net5.0\Razor\Views\Home\NewDish.cshtml.g.cs
+C:\Users\james\OneDrive\Desktop\coding_dojo\CRUDelicious\obj\Debug\net5.0\Razor\Views\Home\EditDish.cshtml.g.cs

@@ -14,12 +14,7 @@
       <p>@ViewBag.Dish.Tastiness</p>
     </div>
     <div>
-      <a href="/delete/@ViewBag.Dish.DishId">Testing</a>
-      <form asp-controller = "Home" asp-action="/delete/@ViewBag.Dish.DishId" method="GET">
-        <input type="submit" value="Delete"/>
-      </form>
-      <form asp-controller = "Home" asp-action="/edit/@ViewBag.dishID">
-        <input type="submit" value="Edit"/>
-      </form>
+      <a href="/delete/@ViewBag.Dish.DishId">Delete</button>
+      <a href="/edit/@ViewBag.Dish.DishId">Edit</button>
     </div>
 </div>

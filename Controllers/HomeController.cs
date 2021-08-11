@@ -67,7 +67,7 @@ namespace CRUDelicious.Controllers
             ViewBag.AllDishes = dbContext.Dishes.ToList();
             return RedirectToAction("");
         }
-        [HttpGet("/edit/{dishId}")]
+        [HttpGet("/edit/{dishID}")]
         public IActionResult EditDish(int dishId)
         {
             Dish RetrievedDish = dbContext.Dishes
@@ -79,7 +79,7 @@ namespace CRUDelicious.Controllers
             // Finally, .SaveChanges() will update the DB with these new values
             dbContext.SaveChanges();
 
-            return View("/dish/{dishID}");
+            return RedirectToAction("/dish/{dishID}");
         }
 
         public IActionResult Privacy()

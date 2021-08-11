@@ -15649,6 +15649,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\james\\OneDrive\\Desktop\\coding_dojo\\CRUDelicious\\Views\\Home\\EditDish.cshtml",
+      "TargetPath": "Views\\Home\\EditDish.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\james\\OneDrive\\Desktop\\coding_dojo\\CRUDelicious\\Views\\Home\\NewDish.cshtml",
       "TargetPath": "Views\\Home\\NewDish.cshtml",
       "FileKind": "mvc"
