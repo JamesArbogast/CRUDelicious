@@ -67,19 +67,30 @@ namespace CRUDelicious.Controllers
             ViewBag.AllDishes = dbContext.Dishes.ToList();
             return RedirectToAction("");
         }
+
         [HttpGet("/edit/{dishID}")]
         public IActionResult EditDish(int dishId)
         {
             Dish RetrievedDish = dbContext.Dishes
             .FirstOrDefault(dish => dish.DishId == dishId);
-            // Then we may modify properties of this tracked model object
-            RetrievedDish.Name = "New name";
-            RetrievedDish.UpdatedAt = DateTime.Now;
-            
-            // Finally, .SaveChanges() will update the DB with these new values
+
+            return View("EditDish", RetrievedDish);
+        }
+        
+        [HttpPost("/editing/{dishId}")]
+        public IActionResult EditingDish(int dishId, Dish updatedDish)
+        {
+            Dish RetrievedDish = dbContext.Dishes
+            .FirstOrDefault(dish => dish.DishId == dishId);
+            RetrievedDish.Name = updatedDish.Name;
+            RetrievedDish.ChefsName = updatedDish.ChefsName;
+            RetrievedDish.Calories = updatedDish.Calories;
+            RetrievedDish.Tastiness = updatedDish.Tastiness;
+            RetrievedDish.Description = updatedDish.Description;
+            dbContext.Dishes.Update(RetrievedDish);
             dbContext.SaveChanges();
 
-            return RedirectToAction("/dish/{dishID}");
+            return RedirectToAction("ViewDish", new {dishId = dishId});
         }
 
         public IActionResult Privacy()

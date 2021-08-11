@@ -6,7 +6,7 @@
 
 <div class="text-center">
     <h1 class="display-4">@ViewBag.Dish.Name</h1>
-    <h2>@ViewBag.Dish.ChefsName</h2> <a href="/"><p>Home</p></a>
+    <h2>@ViewBag.Dish.ChefsName</h2> <a href="/home"><p>Home</p></a>
     <hr>
     <div>
       <p>@ViewBag.Dish.Description</p>
@@ -14,7 +14,7 @@
       <p>@ViewBag.Dish.Tastiness</p>
     </div>
     <div>
-      <a href="/delete/@ViewBag.Dish.DishId">Delete</button>
-      <a href="/edit/@ViewBag.Dish.DishId">Edit</button>
+      <a href="/delete/@ViewBag.Dish.DishId"><button>Delete</button></a>
+      <a href="/edit/@ViewBag.Dish.DishId"><button>Edit</button></a>
     </div>
 </div>

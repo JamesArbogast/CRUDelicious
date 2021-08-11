@@ -1,23 +1,23 @@
 @model Dish
 
 <div class="text-center">
-  <p>Edit @ViewBag.Dish.Name</p> <a href="/new"><p>Home</p></a>
-  <form asp-controller="Home" asp-action="EditDish" method="POST">
+  <p>Edit @Model.Name</p> <a href="/home"><p>Home</p></a>
+  <form asp-controller="Home" asp-action="EditingDish" asp-route-dishId="@Model.DishId" method="post">
       <div>
         <label asp-for="ChefsName">Chef's Name: </label>
-        <input type="text" asp-for="ChefsName" value="@ViewBag.Dish.ChefsName"/>
+        <input asp-for="ChefsName" value="@Model.ChefsName" rows="1"/>
       </div>
       <div>
         <label asp-for="Name">Name: </label>
-        <input type="text" asp-for="Name"/>
-      </div> 
+        <input asp-for="Name" value="@Model.Name"/>
+      </div>
       <div>
         <label asp-for="Calories">Calories: </label>
-        <input type="text" asp-for="Calories"/>
+        <input asp-for="Calories" value="@Model.Calories"/>
       </div>
       <div>
         <label asp-for="Tastiness">Tastiness: </label>
-        <select asp-for="Tastiness">
+        <select asp-for="Tastiness" value="@Model.Tastiness">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -27,8 +27,8 @@
       </div>
       <div>
         <label asp-for="Description">Description: </label>
-        <textarea asp-for="Description"></textarea>
+        <textarea asp-for="Description" value="@Model.Description"></textarea>
       </div>
-      <button type="submit">Submit</button>
+      <input type="submit" value="Submit">
   </form>
 </div>
